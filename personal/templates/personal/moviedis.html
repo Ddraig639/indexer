@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Movies</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <style>
+        *, *:before, *:after {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+
+        body {
+          background: #105469;
+          font-family: 'Open Sans', sans-serif;
+        }
+        table {
+          background: #012B39;
+          border-radius: 0.25em;
+          border-collapse: collapse;
+          margin: 1em;
+        }
+        th {
+          border-bottom: 1px solid #364043;
+          color: #E2B842;
+          font-size: 0.85em;
+          font-weight: 600;
+          padding: 0.5em 1em;
+          text-align: left;
+        }
+        td {
+          color: #fff;
+          font-weight: 400;
+          padding: 0.65em 1em;
+        }
+        .disabled td {
+          color: #4F5F64;
+        }
+        tbody tr {
+          transition: background 0.25s ease;
+        }
+        tbody tr:hover {
+          background: #014055;
+        }
+    </style>
+
+</head>
+<body>
+
+<table>
+  <thead>
+    <tr>
+      <th>Movie Name
+      <th>Movie Year
+  </thead>
+
+  <tbody>
+        {% for i in allm %}
+            {% include 'personal/snippets/moviesnip.html' with value=i %}
+        {% endfor %}
+
+  </tbody>
+</table>
+
+
+</body>
+</html>
+
